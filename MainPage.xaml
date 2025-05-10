@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginPage.MainPage"
+             BackgroundColor="#F8F8F8">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <VerticalStackLayout
+                Grid.Row="1"
+                Padding="20"
+                Spacing="20"
+                HorizontalOptions="Center"
+                WidthRequest="300"
+                MaximumWidthRequest="500"
+                BackgroundColor="Transparent">
+
+                <Label Text="Kayıt Formu"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    TextColor="#2e8b57"
+                    HorizontalOptions="Center"
+                />
+
+                <Entry x:Name="nameEntry"
+                    Placeholder="İsminizi Giriniz"
+                    PlaceholderColor="Gray"
+                    MaxLength="15"
+                    ClearButtonVisibility="WhileEditing"
+                    CharacterSpacing="1"
+                />
+
+                <Entry x:Name="surnameEntry"
+                    Placeholder="Soyadınızı Giriniz"
+                    PlaceholderColor="Gray"
+                    MaxLength="15"
+                    ClearButtonVisibility="WhileEditing"
+                    CharacterSpacing="1"
+                />
+
+                <Entry x:Name="emailEntry"
+                    Placeholder="E-posta Adresinizi Giriniz"
+                    PlaceholderColor="Gray"
+                    MaxLength="50"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Email"
+                    CharacterSpacing="1"
+                />
+
+                <Entry x:Name="passwordEntry"
+                    Placeholder="Şifrenizi Giriniz"
+                    PlaceholderColor="Gray"
+                    MaxLength="15"
+                    ClearButtonVisibility="WhileEditing"
+                    CharacterSpacing="1"
+                    IsPassword="True"
+                />
+
+                <Button x:Name="kayıtButton"
+                    Text="Kayıt Ol"
+                    TextColor="White"
+                    BackgroundColor="#2e8b57"
+                    Clicked="OnButtonClicked"
+                    CornerRadius="20"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                />
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
